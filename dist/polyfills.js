@@ -109,3 +109,4 @@ async function polyfill(locale = '') {
     await Promise.all(dataPolyfills);
 }
 exports.polyfill = polyfill;
+//# sourceMappingURL=polyfills.js.map

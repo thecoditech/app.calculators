@@ -31,3 +31,4 @@ Promise.all([app.prepare(), ...SUPPORTED_LOCALES.map(polyfills_1.polyfill)]).the
         console.log(`> Ready on http://localhost:${port}`);
     });
 });
+//# sourceMappingURL=server.js.map

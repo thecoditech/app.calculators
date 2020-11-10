@@ -1,6 +1,6 @@
+import { ServerStyleSheets } from '@material-ui/core/styles'
 import React from 'react'
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/core/styles'
 
 import theme from '../src/theme'
 
@@ -21,7 +21,7 @@ class MyDocument extends Document<Props> {
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+        enhanceApp: App => props => sheets.collect(<App {...props} />),
       })
 
     const initialProps = await Document.getInitialProps(ctx)

@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
+const react_1 = __importStar(require("react"));
 const react_intl_1 = require("react-intl");
 const prop_types_1 = __importDefault(require("prop-types"));
 const app_1 = __importDefault(require("next/app"));
@@ -32,7 +32,7 @@ const CssBaseline_1 = __importDefault(require("@material-ui/core/CssBaseline"));
 const polyfills_1 = require("../polyfills");
 const theme_1 = __importDefault(require("../src/theme"));
 function MyApp({ Component, locale, messages, pageProps }) {
-    react_1.default.useEffect(() => {
+    react_1.useEffect(() => {
         // Remove the server-side injected CSS.
         const jssStyles = document.querySelector('#jss-server-side');
         if (jssStyles) {
@@ -44,9 +44,7 @@ function MyApp({ Component, locale, messages, pageProps }) {
         <meta charSet="utf-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-        <title>My page</title>
-
-        <title>Next.js PWA Example</title>
+        <title>Calculators</title>
 
         <link rel="manifest" href="/manifest.json"/>
         <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"/>
@@ -119,3 +117,4 @@ MyApp.propTypes = {
     pageProps: prop_types_1.default.object.isRequired,
 };
 exports.default = MyApp;
+//# sourceMappingURL=_app.jsx.map

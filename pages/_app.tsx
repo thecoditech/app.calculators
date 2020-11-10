@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IntlProvider } from 'react-intl'
 import PropTypes from 'prop-types'
 import App, { AppProps } from 'next/app'
@@ -15,7 +15,7 @@ interface Props extends AppProps {
 }
 
 function MyApp({ Component, locale, messages, pageProps }: Props) {
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
@@ -32,9 +32,7 @@ function MyApp({ Component, locale, messages, pageProps }: Props) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <title>My page</title>
-
-        <title>Next.js PWA Example</title>
+        <title>Calculators</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link

@@ -22,9 +22,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const styles_1 = require("@material-ui/core/styles");
 const react_1 = __importDefault(require("react"));
 const document_1 = __importStar(require("next/document"));
-const styles_1 = require("@material-ui/core/styles");
 const theme_1 = __importDefault(require("../src/theme"));
 class MyDocument extends document_1.default {
     static async getInitialProps(ctx) {
@@ -34,7 +34,7 @@ class MyDocument extends document_1.default {
         const sheets = new styles_1.ServerStyleSheets();
         const originalRenderPage = ctx.renderPage;
         ctx.renderPage = () => originalRenderPage({
-            enhanceApp: (App) => (props) => sheets.collect(<App {...props}/>),
+            enhanceApp: App => props => sheets.collect(<App {...props}/>),
         });
         const initialProps = await document_1.default.getInitialProps(ctx);
         return {
@@ -68,3 +68,4 @@ class MyDocument extends document_1.default {
     }
 }
 exports.default = MyDocument;
+//# sourceMappingURL=_document.jsx.map
