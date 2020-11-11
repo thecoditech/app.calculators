@@ -1170,6 +1170,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@corex/deepmerge@^2.4.24":
+  version "2.4.24"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.4.24.tgz#d02aa2bf1a5c7f3847d4227d6700419450909f63"
+  integrity sha512-TBYXnhxYU9kqDhUXm/rgDRRAxHVpX8Y3ZX+zmTmQuhRF9p7orsrx+P/lVXS7PcPnOFFVE3ZvyE5MIYFipecy8g==
+
 "@emotion/hash@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
@@ -4778,6 +4783,13 @@ next-seo@^4.16.0:
   version "4.16.0"
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.16.0.tgz#e976432553425d35ae145dd09389a28ea96af9c2"
   integrity sha512-32dS768q9q3QcTCeBWlThhAqE8yjchWUvyM8sB4ioaW3VPXEVlfK7wQqHHIg/dkfKALFUK9wQ8DdsRGD1UYGog==
+
+next-sitemap@^1.2.26:
+  version "1.2.26"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.26.tgz#a810c7f53a71f70073b4f9171f50cd96b2a43125"
+  integrity sha512-F3n/NiG4u2lA7t5Qfj50+TDWD8pzDdPV/HfUiKpidMc48w3iGmTRU6b7cWMtpQuhbEipfdx21oHsrwDOuGUf6g==
+  dependencies:
+    "@corex/deepmerge" "^2.4.24"
 
 next-tick@~1.0.0:
   version "1.0.0"

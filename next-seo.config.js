@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   siteUrl: 'https://calculators.infinitetoolbox.org',
 
   openGraph: {

@@ -11,7 +11,8 @@
     "start-no-custom-server": "next start",
     "extract:i18n": "formatjs extract '{pages,components}/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json",
     "compile:i18n": "formatjs compile-folder --ast --format simple lang/ compiled-lang/",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@formatjs/cli": "^2.13.8",
@@ -37,6 +38,7 @@
     "next": "10.0.1",
     "next-pwa": "^3.1.5",
     "next-seo": "^4.16.0",
+    "next-sitemap": "^1.2.26",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-intl": "^5.9.2"
