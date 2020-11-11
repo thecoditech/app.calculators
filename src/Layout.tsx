@@ -164,8 +164,8 @@ const Layout: React.FC = ({ children }) => {
         <Divider />
         <List>
           {navLinks.map(({ link, text }, index) => (
-            <Link href={link} passHref>
-              <ListItem button key={index}>
+            <Link href={link} passHref key={index}>
+              <ListItem button>
                 <ListItemIcon>
                   <FunctionsIcon />
                 </ListItemIcon>
