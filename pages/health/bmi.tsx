@@ -6,16 +6,22 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
+import { NextSeo } from 'next-seo'
 import React, { useState } from 'react'
-import Head from 'next/head'
 
 import Layout from '../../src/Layout'
+
+import SEO from '../../next-seo.config'
 
 const computeBmi = (mass: number, height: number): number => bmiCalculator(mass, height / 100)
 
 const defaultMass = 60
 const defaultHeight = 180
 const defaultBmi = computeBmi(defaultMass, defaultHeight)
+
+const pageTitle = 'BMI Calculator'
+const pageDescription = ''
+const pageUrl = `${SEO.siteUrl}/health/bmi`
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,9 +54,16 @@ function BmiPage() {
 
   return (
     <Layout>
-      <Head>
-        <title>BMI Calculator</title>
-      </Head>
+      <NextSeo
+        title={pageTitle}
+        description={pageDescription}
+        canonical={pageUrl}
+        openGraph={{
+          url: pageUrl,
+          title: pageTitle,
+          description: pageDescription,
+        }}
+      />
 
       <Box textAlign="center">
         <Typography className={classes.title} component="h1" variant="h2">

@@ -3,11 +3,14 @@ import { IntlProvider } from 'react-intl'
 import PropTypes from 'prop-types'
 import App, { AppProps } from 'next/app'
 import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
 import { polyfill } from '../polyfills';
 import theme from '../src/theme'
+
+import SEO from '../next-seo.config'
 
 interface Props extends AppProps {
   locale: string,
@@ -25,6 +28,7 @@ function MyApp({ Component, locale, messages, pageProps }: Props) {
 
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
