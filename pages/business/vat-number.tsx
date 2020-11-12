@@ -7,7 +7,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { NextSeo } from 'next-seo'
-import React, { ChangeEvent, useState } from 'react'
+import React, { useState } from 'react'
 
 import Layout from '../../src/Layout'
 

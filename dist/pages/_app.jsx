@@ -27,10 +27,12 @@ const react_intl_1 = require("react-intl");
 const prop_types_1 = __importDefault(require("prop-types"));
 const app_1 = __importDefault(require("next/app"));
 const head_1 = __importDefault(require("next/head"));
+const next_seo_1 = require("next-seo");
 const styles_1 = require("@material-ui/core/styles");
 const CssBaseline_1 = __importDefault(require("@material-ui/core/CssBaseline"));
 const polyfills_1 = require("../polyfills");
 const theme_1 = __importDefault(require("../src/theme"));
+const next_seo_config_1 = __importDefault(require("../next-seo.config"));
 function MyApp({ Component, locale, messages, pageProps }) {
     react_1.useEffect(() => {
         // Remove the server-side injected CSS.
@@ -40,6 +42,7 @@ function MyApp({ Component, locale, messages, pageProps }) {
         }
     }, []);
     return (<>
+      <next_seo_1.DefaultSeo {...next_seo_config_1.default}/>
       <head_1.default>
         <meta charSet="utf-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>

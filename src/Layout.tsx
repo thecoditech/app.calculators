@@ -97,13 +97,78 @@ const navLinks: Array<{ link: string, text: string }> = [
   {
     link: '/business/vat-number',
     text: 'VAT Number'
-  }
+  },
+
+  {
+    link: '/converters/data-storage',
+    text: 'Data Storage'
+  },
+
+  // {
+  //   link: '/converters/electricity-magnetism',
+  //   text: 'Electricity Magnetism'
+  // },
+
+  {
+    link: '/converters/energy',
+    text: 'Energy'
+  },
+
+  {
+    link: '/converters/force',
+    text: 'Force'
+  },
+  
+  {
+    link: '/converters/length',
+    text: 'Length'
+  },
+
+  // {
+  //   link: '/converters/liquid-volume',
+  //   text: 'Liquid Volume'
+  // },
+
+  {
+    link: '/converters/mass',
+    text: 'Mass'
+  },
+
+  {
+    link: '/converters/power',
+    text: 'Power'
+  },
+
+  {
+    link: '/converters/pressure',
+    text: 'Pressure'
+  },
+
+  {
+    link: '/converters/surface-area',
+    text: 'Surface Area'
+  },
+
+  {
+    link: '/converters/temperature',
+    text: 'Temperature'
+  },
+
+  {
+    link: '/converters/time',
+    text: 'Time'
+  },
+
+  {
+    link: '/converters/volume',
+    text: 'Volume'
+  },
 ]
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles()
   const theme = useTheme()
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
   const handleDrawerOpen = () => {
     setOpen(true)

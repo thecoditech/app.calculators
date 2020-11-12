@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const bmi_calculator_1 = __importDefault(require("@infinitetoolbox/bmi-calculator"));
+const vat_calculator_1 = require("@infinitetoolbox/vat-calculator");
 const Box_1 = __importDefault(require("@material-ui/core/Box"));
 const Button_1 = __importDefault(require("@material-ui/core/Button"));
 const Card_1 = __importDefault(require("@material-ui/core/Card"));
@@ -34,13 +34,10 @@ const next_seo_1 = require("next-seo");
 const react_1 = __importStar(require("react"));
 const Layout_1 = __importDefault(require("../../src/Layout"));
 const next_seo_config_1 = __importDefault(require("../../next-seo.config"));
-const computeBmi = (mass, height) => bmi_calculator_1.default(mass, height / 100);
-const defaultMass = 60;
-const defaultHeight = 180;
-const defaultBmi = computeBmi(defaultMass, defaultHeight);
-const pageTitle = 'BMI Calculator';
+const computeVatNumber = (siretOrSiren) => vat_calculator_1.frenchVatCalculator(siretOrSiren);
+const pageTitle = 'French VAT Number Calculator';
 const pageDescription = '';
-const pageUrl = `${next_seo_config_1.default.siteUrl}/health/bmi`;
+const pageUrl = `${next_seo_config_1.default.siteUrl}/business/vat-number`;
 const useStyles = styles_1.makeStyles((theme) => styles_1.createStyles({
     root: {
         flexGrow: 1,
@@ -53,13 +50,15 @@ const useStyles = styles_1.makeStyles((theme) => styles_1.createStyles({
     },
     textField: {}
 }));
-function BmiPage() {
+function VATNumberPage() {
     const classes = useStyles();
-    const [mass, setMass] = react_1.useState(defaultMass);
-    const [height, setHeight] = react_1.useState(defaultHeight);
-    const [bmi, setBMI] = react_1.useState(defaultBmi);
+    const [siretOrSiren, setSiretOrSiren] = react_1.useState('');
+    const [vatNumber, setVATNumber] = react_1.useState(null);
+    const _handleSiretOrSirenChange = (e) => {
+        setSiretOrSiren(e.target.value.trim().replace(/\s/g, ''));
+    };
     const _handleComputeClick = () => {
-        setBMI(computeBmi(mass, height));
+        setVATNumber(computeVatNumber(+siretOrSiren));
     };
     return (<Layout_1.default>
       <next_seo_1.NextSeo title={pageTitle} description={pageDescription} canonical={pageUrl} openGraph={{
@@ -70,32 +69,26 @@ function BmiPage() {
 
       <Box_1.default textAlign="center">
         <Typography_1.default className={classes.title} component="h1" variant="h2">
-          BMI Calculator
+          French VAT Number Calculator
         </Typography_1.default>
 
         <form className={classes.form} noValidate autoComplete="off">
           <div className={classes.root}>
             <Grid_1.default container spacing={3}>
               <Grid_1.default item xs={12}>
-                <Card_1.default>
-                  <Typography_1.default variant="h4">
-                    BMI
+                {vatNumber && (<Card_1.default>
+                    <Typography_1.default variant="h4">
+                      VAT
                   </Typography_1.default>
 
-                  <Typography_1.default variant="subtitle1">
-                    {bmi.toPrecision(4)}
-                  </Typography_1.default>
-                  <Typography_1.default color="textSecondary">
-                    kg/m2
-                  </Typography_1.default>
-                </Card_1.default>
+                    <Typography_1.default variant="subtitle1">
+                      {vatNumber}
+                    </Typography_1.default>
+                  </Card_1.default>)}
               </Grid_1.default>
 
-              <Grid_1.default item xs={6}>
-                <TextField_1.default className={classes.textField} label="Mass (in kg)" variant="outlined" value={mass} onChange={e => setMass(+e.target.value)}/>
-              </Grid_1.default>
-              <Grid_1.default item xs={6}>
-                <TextField_1.default className={classes.textField} label="Height (in cm)" variant="outlined" value={height} onChange={e => setHeight(+e.target.value)}/>
+              <Grid_1.default item xs={12}>
+                <TextField_1.default className={classes.textField} label="French SIRET or SIREN" variant="outlined" value={siretOrSiren} onChange={_handleSiretOrSirenChange}/>
               </Grid_1.default>
 
               <Grid_1.default item xs={12}>
@@ -107,5 +100,5 @@ function BmiPage() {
       </Box_1.default>
     </Layout_1.default>);
 }
-exports.default = BmiPage;
-//# sourceMappingURL=bmi.jsx.map
+exports.default = VATNumberPage;
+//# sourceMappingURL=vat-number.jsx.map

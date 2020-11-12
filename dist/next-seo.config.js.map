@@ -1,0 +1,1 @@
+{"version":3,"file":"next-seo.config.js","sourceRoot":"","sources":["../next-seo.config.js"],"names":[],"mappings":";AAAA,MAAM,CAAC,OAAO,GAAG;IACf,OAAO,EAAE,yCAAyC;IAElD,SAAS,EAAE;QACT,IAAI,EAAE,SAAS;QACf,MAAM,EAAE,OAAO;QACf,SAAS,EAAE,aAAa;KACzB;IAED,OAAO,EAAE;QACP,qBAAqB;QACrB,iBAAiB;QACjB,QAAQ,EAAE,qBAAqB;KAChC;CACF,CAAA"}

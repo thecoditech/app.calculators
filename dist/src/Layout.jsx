@@ -113,12 +113,64 @@ const navLinks = [
     {
         link: '/business/vat-number',
         text: 'VAT Number'
-    }
+    },
+    {
+        link: '/converters/data-storage',
+        text: 'Data Storage'
+    },
+    // {
+    //   link: '/converters/electricity-magnetism',
+    //   text: 'Electricity Magnetism'
+    // },
+    {
+        link: '/converters/energy',
+        text: 'Energy'
+    },
+    {
+        link: '/converters/force',
+        text: 'Force'
+    },
+    {
+        link: '/converters/length',
+        text: 'Length'
+    },
+    // {
+    //   link: '/converters/liquid-volume',
+    //   text: 'Liquid Volume'
+    // },
+    {
+        link: '/converters/mass',
+        text: 'Mass'
+    },
+    {
+        link: '/converters/power',
+        text: 'Power'
+    },
+    {
+        link: '/converters/pressure',
+        text: 'Pressure'
+    },
+    {
+        link: '/converters/surface-area',
+        text: 'Surface Area'
+    },
+    {
+        link: '/converters/temperature',
+        text: 'Temperature'
+    },
+    {
+        link: '/converters/time',
+        text: 'Time'
+    },
+    {
+        link: '/converters/volume',
+        text: 'Volume'
+    },
 ];
 const Layout = ({ children }) => {
     const classes = useStyles();
     const theme = styles_1.useTheme();
-    const [open, setOpen] = react_1.useState(false);
+    const [open, setOpen] = react_1.useState(true);
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -159,8 +211,8 @@ const Layout = ({ children }) => {
         </div>
         <Divider_1.default />
         <List_1.default>
-          {navLinks.map(({ link, text }, index) => (<link_1.default href={link} passHref>
-              <ListItem_1.default button key={index}>
+          {navLinks.map(({ link, text }, index) => (<link_1.default href={link} passHref key={index}>
+              <ListItem_1.default button>
                 <ListItemIcon_1.default>
                   <Functions_1.default />
                 </ListItemIcon_1.default>
