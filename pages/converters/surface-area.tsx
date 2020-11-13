@@ -14,14 +14,16 @@ import SEO from '../../next-seo.config'
 interface Props extends WithUnitConverterComponentProps { }
 
 const units: Unit[] = [
-  new Unit('Pa', 'Pa'),
-  new Unit('psi', 'psi'),
-  new Unit('atm', 'atm'),
-  new Unit('torr', 'torr'),
-  new Unit('bar', 'bar'),
-  new Unit('mmHg', 'mmHg'),
-  new Unit('mmH2O', 'mmH2O'),
-  new Unit('cmH2O', 'cmH2O')
+  new Unit('m2', 'm2'),
+  new Unit('sqin', 'sqin'),
+  new Unit('sqft', 'sqft'),
+  new Unit('sqyd', 'sqyd'),
+  new Unit('sqmi', 'sqmi'),
+  new Unit('sqrd', 'sqrd'),
+  new Unit('sqch', 'sqch'),
+  new Unit('sqmil', 'sqmil'),
+  new Unit('acre', 'acre'),
+  new Unit('hectare', 'hectare')
 ]
 
 const pageTitle = 'Surface Area converter'
