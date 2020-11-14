@@ -7,6 +7,7 @@ import React from 'react'
 import { Unit } from '../../src/unit'
 import { withUnitConverter, WithUnitConverterComponentProps } from '../../src/withUnitConverter'
 import { UnitConvertForm } from '../../src/UnitConverterForm'
+import { UnitConverterValuesList } from '../../src/UnitConverterValuesList'
 import Layout from '../../src/Layout'
 
 import SEO from '../../next-seo.config'
@@ -20,7 +21,7 @@ const units: Unit[] = [
   new Unit('yard', 'yd'),
   new Unit('mile', 'mi'),
   new Unit('link', 'li'),
-  new Unit('rod', 'ro'),
+  new Unit('rod', 'rod'),
   new Unit('chain', 'ch'),
   new Unit('angstrom', 'angstrom'),
   new Unit('mil', 'mil')
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-const LengthPage: React.FC<Props> = (props) => {
+const LengthPage: React.FC<Props> = ({ valueFrom, unitFrom, valuesList, ...props }) => {
   const classes = useStyles()
 
   return (
@@ -69,10 +70,11 @@ const LengthPage: React.FC<Props> = (props) => {
           {pageTitle}
         </Typography>
 
-        <UnitConvertForm {...props} />
+        <UnitConvertForm valueFrom={valueFrom} unitFrom={unitFrom} {...props} />
+        <UnitConverterValuesList valueFrom={valueFrom} unitFrom={unitFrom} values={valuesList} />
       </Box>
     </Layout>
   )
 }
 
-export default withUnitConverter(LengthPage, units)
+export default withUnitConverter(LengthPage, units, { unitsListEnabled: true })

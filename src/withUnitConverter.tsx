@@ -3,12 +3,18 @@ import React from 'react'
 
 import { Unit } from './unit'
 
+interface Options {
+  unitsListEnabled: boolean
+}
+
 interface Props { }
 interface State {
   unitFrom: Unit,
   unitTo: Unit,
   valueFrom: number,
   valueTo: number
+
+  valuesList: UnitValuesList
 }
 
 export interface WithUnitConverterComponentProps {
@@ -21,12 +27,18 @@ export interface WithUnitConverterComponentProps {
   setValueFrom: ValueSetter,
   valueFrom: number,
   valueTo: number
+  valuesList: UnitValuesList
 }
 
+export type UnitValuesList = Array<{ value: number, unit: Unit }>
 export type ValueSetter = (value: number) => void
 export type UnitSetter = (unit: Unit) => void
 
-export const withUnitConverter = <P extends object>(Component: React.ComponentType<WithUnitConverterComponentProps>, units: Unit[] = []) =>
+const defaultOptions: Options = {
+  unitsListEnabled: false
+}
+
+export const withUnitConverter = <P extends object>(Component: React.ComponentType<WithUnitConverterComponentProps>, units: Unit[] = [], options: Options = defaultOptions) =>
   /**
    * Converter service class.
    */
@@ -37,29 +49,71 @@ export const withUnitConverter = <P extends object>(Component: React.ComponentTy
       const unitFrom = units[0]
       const unitTo = units[1]
       const valueFrom = 1
-      const valueTo = this._convert(unitFrom, unitTo, valueFrom)
+      const { valueTo, valuesList } = this._convert(unitFrom, unitTo, valueFrom, units)
 
       this.state = {
         unitFrom,
         unitTo,
         valueFrom,
-        valueTo
+        valueTo,
+        valuesList
       }
     }
 
     /**
-     * Convert with units and number attributes.
+     * Convert with unit and number attributes.
      *
      * @param {Unit} unitFrom
      * @param {Unit} unitTo
      * @param {number} valueFrom
      * @return {number}
      */
-    private _convert(unitFrom: Unit, unitTo: Unit, valueFrom: number): number {
+    private _convertOne(unitFrom: Unit, unitTo: Unit, valueFrom: number): number {
       const from = mathUnit(valueFrom, unitFrom.abbreviation)
       const to = from.toNumber(unitTo.abbreviation)
 
       return to
+    }
+
+    /**
+     * Convert with multiple units.
+     *
+     * @param {Unit} unitFrom
+     * @param {Unit[]} unitsTo
+     * @param {number} valueFrom
+     * @return {UnitValuesList>}
+     */
+    private _convertMany(unitFrom: Unit, unitsTo: Unit[], valueFrom: number): UnitValuesList {
+      const from = mathUnit(valueFrom, unitFrom.abbreviation)
+      const valuesList = unitsTo.filter(({ abbreviation }) => abbreviation !== unitFrom.abbreviation).map(unit => ({
+        value: from.toNumber(unit.abbreviation),
+        unit
+      }))
+      
+      return valuesList
+    }
+
+    /**
+     * Convert with one unit or multiple ones depending on if the unitsListEnabled is true or false.
+     *
+     * @param {Unit} unitFrom 
+     * @param {Unit} unitTo 
+     * @param {number} valueFrom 
+     * @param {Unit[]} units
+     * @return { valueTo: number, valuesList: UnitValuesList }
+     */
+    private _convert(unitFrom: Unit, unitTo: Unit, valueFrom: number, units: Unit[] = []): { valueTo: number, valuesList: UnitValuesList } {
+      const { unitsListEnabled } = options
+      const valueTo = this._convertOne(unitFrom, unitTo, valueFrom)
+      let valuesList: UnitValuesList = []
+      if (unitsListEnabled) {
+        valuesList = this._convertMany(unitFrom, units, valueFrom)
+      }
+
+      return {
+        valueTo,
+        valuesList
+      }
     }
 
     /**
@@ -113,16 +167,16 @@ export const withUnitConverter = <P extends object>(Component: React.ComponentTy
      */
     protected handleChange = () => {
       const { unitFrom, unitTo, valueFrom } = this.state
-      const from = mathUnit(valueFrom, unitFrom.abbreviation)
-      const to = from.toNumber(unitTo.abbreviation)
+      const { valueTo, valuesList } = this._convert(unitFrom, unitTo, valueFrom, units)
 
       this.setState({
-        valueTo: to
+        valueTo,
+        valuesList
       })
     }
 
     render() {
-      const { unitFrom, unitTo, valueFrom, valueTo } = this.state
+      const { unitFrom, unitTo, valueFrom, valueTo, valuesList } = this.state
 
       return (
         <Component
@@ -135,6 +189,7 @@ export const withUnitConverter = <P extends object>(Component: React.ComponentTy
           setValueFrom={this.handleValueFromChange}
           valueFrom={valueFrom}
           valueTo={valueTo}
+          valuesList={valuesList}
         />
       )
     }

@@ -12,7 +12,7 @@ import React from 'react'
 
 import { UnitSetter, WithUnitConverterComponentProps } from './withUnitConverter'
 
-interface Props extends WithUnitConverterComponentProps { }
+interface Props extends Pick<WithUnitConverterComponentProps, 'invert' | 'setUnitFrom' | 'setUnitTo' | 'setValueFrom' | 'units' | 'unitFrom' | 'unitTo' | 'valueFrom' | 'valueTo'> { }
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

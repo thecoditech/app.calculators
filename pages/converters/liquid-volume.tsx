@@ -7,6 +7,7 @@ import React from 'react'
 import { Unit } from '../../src/unit'
 import { withUnitConverter, WithUnitConverterComponentProps } from '../../src/withUnitConverter'
 import { UnitConvertForm } from '../../src/UnitConverterForm'
+import { UnitConverterValuesList } from '../../src/UnitConverterValuesList'
 import Layout from '../../src/Layout'
 
 import SEO from '../../next-seo.config'
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-const LiquidVolumePage: React.FC<Props> = (props) => {
+const LiquidVolumePage: React.FC<Props> = ({ valueFrom, unitFrom, valuesList, ...props }) => {
   const classes = useStyles()
 
   return (
@@ -73,10 +74,11 @@ const LiquidVolumePage: React.FC<Props> = (props) => {
           {pageTitle}
         </Typography>
 
-        <UnitConvertForm {...props} />
+        <UnitConvertForm valueFrom={valueFrom} unitFrom={unitFrom} {...props} />
+        <UnitConverterValuesList valueFrom={valueFrom} unitFrom={unitFrom} values={valuesList} />
       </Box>
     </Layout>
   )
 }
 
-export default withUnitConverter(LiquidVolumePage, units)
+export default withUnitConverter(LiquidVolumePage, units, { unitsListEnabled: true })
