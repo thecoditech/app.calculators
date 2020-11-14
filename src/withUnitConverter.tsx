@@ -36,7 +36,7 @@ export const withUnitConverter = <P extends object>(Component: React.ComponentTy
 
       const unitFrom = units[0]
       const unitTo = units[1]
-      const valueFrom = 0
+      const valueFrom = 1
       const valueTo = this._convert(unitFrom, unitTo, valueFrom)
 
       this.state = {

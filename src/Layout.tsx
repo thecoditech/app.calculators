@@ -100,6 +100,11 @@ const navLinks: Array<{ link: string, text: string }> = [
   },
 
   {
+    link: '/converters/angles',
+    text: 'Angles'
+  },
+
+  {
     link: '/converters/data-storage',
     text: 'Data Storage'
   },
