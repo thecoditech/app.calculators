@@ -35,8 +35,14 @@ const useStyles = makeStyles((theme: Theme) =>
 export const UnitConvertForm: React.FC<Props> = ({ invert, setUnitFrom, setUnitTo, setValueFrom, units, unitFrom, unitTo, valueFrom, valueTo }) => {
   const classes = useStyles()
 
-  const _handleValueFromChange = (e: React.ChangeEvent<HTMLInputElement>) => setValueFrom(+e.target.value)
-  const _handleUnitChange = (setter: UnitSetter) => (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const _handleValueFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
+
+    setValueFrom(+e.target.value)
+  }
+  const _handleUnitChange = (setter: UnitSetter) => (e: React.ChangeEvent<{ name?: string | undefined, value: unknown }>) => {
+    e.preventDefault()
+
     const index = units.findIndex(({ abbreviation }) => abbreviation === e.target.value)
     if (index === -1) {
       return
