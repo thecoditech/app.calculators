@@ -1066,10 +1066,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@infinitetoolbox/bmi-calculator@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@infinitetoolbox/bmi-calculator/-/bmi-calculator-0.2.0.tgz#603d5439f2102cef40a8bb6ae5f2df83722851b0"
-  integrity sha512-GlTMWpUvviPqQdsvItx1MIuYcvzZ6ZKJNqgMexLYRcI1YtRFC6db+AbMjq3M3xyercfiibAh/Bkb1XAxtOYZPg==
+"@infinitetoolbox/bmi-calculator@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@infinitetoolbox/bmi-calculator/-/bmi-calculator-0.2.1.tgz#7c1113637fd62f7b98ced3160ca7d5d418c7f77e"
+  integrity sha512-m90vBpk+31Rmia1/YfHEZkZ5JoNeMyrLMQSDHj2ZwECIRU6d7zMA4E6kuElUEbVx3IVzhfpwy4fTkW9efOBylg==
 
 "@infinitetoolbox/vat-calculator@0.2.2":
   version "0.2.2"
