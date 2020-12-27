@@ -889,10 +889,10 @@
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.4.24.tgz#d02aa2bf1a5c7f3847d4227d6700419450909f63"
   integrity sha512-TBYXnhxYU9kqDhUXm/rgDRRAxHVpX8Y3ZX+zmTmQuhRF9p7orsrx+P/lVXS7PcPnOFFVE3ZvyE5MIYFipecy8g==
 
-"@emmanuelgautier/renovate-config@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@emmanuelgautier/renovate-config/-/renovate-config-1.1.1.tgz#8fa042ca3095a954f09c59191b66b00c4056bb51"
-  integrity sha512-q8hm4clNHHnuntjfIonghl8tnKx7zAEF0Juc8X1qyUhW+zIBcknkbmloXfHH1djdCZuXU1JRqxhFMIIQ2faZrg==
+"@emmanuelgautier/renovate-config@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@emmanuelgautier/renovate-config/-/renovate-config-1.1.2.tgz#f50c79fb520f7bda4f9035d6582a986c7b2b3b9f"
+  integrity sha512-prP0xmw+XD7ujzTWZ2WfIXKC9/1qwLF+ZOj8ffc3JP2AC2QvEsARMtI/CVIy3M0PKN8cqQUQ3qZHhfEraP7g7w==
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
