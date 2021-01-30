@@ -109,11 +109,6 @@ const navLinks: Array<{ link: string, text: string }> = [
     text: 'Data Storage'
   },
 
-  // {
-  //   link: '/converters/electricity-magnetism',
-  //   text: 'Electricity Magnetism'
-  // },
-
   {
     link: '/converters/energy',
     text: 'Energy'
@@ -123,16 +118,11 @@ const navLinks: Array<{ link: string, text: string }> = [
     link: '/converters/force',
     text: 'Force'
   },
-  
+
   {
     link: '/converters/length',
     text: 'Length'
   },
-
-  // {
-  //   link: '/converters/liquid-volume',
-  //   text: 'Liquid Volume'
-  // },
 
   {
     link: '/converters/mass',
