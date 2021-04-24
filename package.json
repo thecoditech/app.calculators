@@ -15,7 +15,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@formatjs/cli": "3.2.0",
+    "@formatjs/cli": "4.2.8",
     "@formatjs/intl-datetimeformat": "3.3.0",
     "@formatjs/intl-getcanonicallocales": "1.5.3",
     "@formatjs/intl-numberformat": "6.2.1",
