@@ -17,7 +17,7 @@
   "dependencies": {
     "@formatjs/cli": "4.2.8",
     "@formatjs/intl-datetimeformat": "3.3.0",
-    "@formatjs/intl-getcanonicallocales": "1.5.3",
+    "@formatjs/intl-getcanonicallocales": "1.7.0",
     "@formatjs/intl-numberformat": "6.2.1",
     "@formatjs/intl-pluralrules": "4.0.5",
     "@formatjs/intl-relativetimeformat": "8.1.1",
@@ -41,7 +41,7 @@
     "next-sitemap": "1.6.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-intl": "5.17.2"
+    "react-intl": "5.18.0"
   },
   "devDependencies": {
     "@emmanuelgautier/renovate-config": "1.2.0",
