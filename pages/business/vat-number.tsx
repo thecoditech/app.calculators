@@ -13,7 +13,14 @@ import Layout from '../../src/Layout'
 
 import SEO from '../../next-seo.config'
 
-const computeVatNumber = (siretOrSiren: number): string => frenchVatCalculator(siretOrSiren)
+const computeVatNumber = (siretOrSiren: number): string => {
+  const vat = frenchVatCalculator(siretOrSiren)
+  if (vat instanceof Error) {
+    throw vat
+  }
+
+  return vat
+}
 
 const pageTitle = 'French VAT Number Calculator'
 const pageDescription = ''
@@ -77,7 +84,7 @@ function VATNumberPage() {
                   <Card>
                     <Typography variant="h4">
                       VAT
-                  </Typography>
+                    </Typography>
 
                     <Typography variant="subtitle1">
                       {vatNumber}
