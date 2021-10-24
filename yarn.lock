@@ -1174,15 +1174,15 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
 
-"@infinitetoolbox/bmi-calculator@0.2.13":
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/@infinitetoolbox/bmi-calculator/-/bmi-calculator-0.2.13.tgz#be3731e15d6c2a38a458297380e43c8f19a4f4ab"
-  integrity sha512-QkbzD4gsrnfO6GReexwWu5I0wpVPcy+zVVzvIEID1duCu3ykP+2CjCiYw+n6PDAUQpJ+AMa1J049AOuybuITSw==
-
-"@infinitetoolbox/vat-calculator@0.2.14":
+"@infinitetoolbox/bmi-calculator@0.2.14":
   version "0.2.14"
-  resolved "https://registry.yarnpkg.com/@infinitetoolbox/vat-calculator/-/vat-calculator-0.2.14.tgz#d4e6f5c98f5daf178194305f4e1bb8794ee70f47"
-  integrity sha512-BJKaaxXZDe+OLKbgFn9bDVNST1v7ZnZN50AFrPpxy9f0WzekXJVhjorgaPbD8v2QBT/FnpO5H/9fK1eg6TTtJw==
+  resolved "https://registry.yarnpkg.com/@infinitetoolbox/bmi-calculator/-/bmi-calculator-0.2.14.tgz#7df89a3a129057c436f22ea053dbdd676c891735"
+  integrity sha512-UGupPC4j/zdKaW9WBouYFz/+k4Go6/nFqD0EKQQscwAfVqNnKDiYJvzjdAMY/c2YLJ43vzV3S8QMfBjA/gzaAA==
+
+"@infinitetoolbox/vat-calculator@0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@infinitetoolbox/vat-calculator/-/vat-calculator-0.2.15.tgz#4c9b47406b762e3dc84e2cfd55319b4c45a70842"
+  integrity sha512-bjmiDYcTDmRzNAAMMgZiQHxcZGx8xf4WRsA5zS8rQb4NhY70OEeseudEL+/Y7nNKlkeWFK/FAFB2ofgxycQmTg==
 
 "@material-ui/core@4.12.3":
   version "4.12.3"
