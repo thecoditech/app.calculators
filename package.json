@@ -15,11 +15,11 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@formatjs/cli": "4.8.1",
+    "@formatjs/cli": "4.8.2",
     "@formatjs/intl-datetimeformat": "3.3.5",
     "@formatjs/intl-getcanonicallocales": "1.9.0",
     "@formatjs/intl-numberformat": "6.2.10",
-    "@formatjs/intl-pluralrules": "4.3.1",
+    "@formatjs/intl-pluralrules": "4.3.2",
     "@formatjs/intl-relativetimeformat": "8.1.8",
     "@formatjs/intl-utils": "3.8.4",
     "@infinitetoolbox/bmi-calculator": "0.2.14",
@@ -41,7 +41,7 @@
     "next-sitemap": "1.9.12",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-intl": "5.24.4"
+    "react-intl": "5.24.6"
   },
   "devDependencies": {
     "@emmanuelgautier/renovate-config": "1.2.2",
