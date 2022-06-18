@@ -983,10 +983,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@emmanuelgautier/renovate-config@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@emmanuelgautier/renovate-config/-/renovate-config-1.4.0.tgz#ed635ee55c573d56c3e02bcb2bb35187ce2263d9"
-  integrity sha512-dHc4X5F3zRT//dMdxOqR0/uZds8ZhdFmGkHnDr5ond3KMiQXk5YgE8s22iCVwP5LrAJ21EhWzOgEfV7P4ve9ig==
+"@emmanuelgautier/renovate-config@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@emmanuelgautier/renovate-config/-/renovate-config-1.5.0.tgz#5a0b30deaf35c581358d0b89dc0ec07586b750e9"
+  integrity sha512-n5txy3UgumlnP2gsKzwRtqNiHlYfHr9j639Jj/ylpbb+o0zUt0ZeE+TaUHomMphzR8lrmdP8eUdlcIWotE94sg==
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
