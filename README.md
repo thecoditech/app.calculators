@@ -1,6 +1,6 @@
 # Infinitetoolbox Calculators
 
-Available on [calculators.infinitetoolbox.org](https://calculators.infinitetoolbox.org/)
+Available on [infinitetoolbox-calculators.pages.dev](https://infinitetoolbox-calculators.pages.dev/)
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
