@@ -950,10 +950,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@formatjs/cli@5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@formatjs/cli/-/cli-5.0.2.tgz#1df27fc52aae0ddcfc34ac0d2d8504fe244e6f0f"
-  integrity sha512-I25CK1NjqBPab50VZxUHeIwYtDx6C/upjuNQCUUD/Ehte0EoGQk2QOkpwqRScuiFVjLiD2dNxGbq+5n5NGRq7g==
+"@formatjs/cli@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/cli/-/cli-6.3.1.tgz#d1ced45bbd41f8150ac3b0bf9586d0a7dd9e90d1"
+  integrity sha512-UC39GOLL2f+BwHp/GoFuKwaiXKV2hgcgI4kpwX1jlXzm1jlXkOCcUH4w2dWfG5B96VJPmSMB9zFvka90ypfBfA==
 
 "@formatjs/ecma402-abstract@1.11.7":
   version "1.11.7"
